@@ -2,10 +2,8 @@
 
 CabOps AI is a Streamlit app for handling cab operations incidents such as driver absence, vehicle breakdowns, bad weather, and backup capacity shortages. It calculates operational metrics, sends the incident context to Gemini, and returns a structured incident response with priority, dispatch strategy, impact, ready-to-send messages, and manual decision points.
 
-# Demo:
-
-
-
+# Demo: https://cabops-ttbvqvora583xu7yjszbuu.streamlit.app/
+https://github.com/user-attachments/assets/9b9ff04f-ea8a-459b-8c52-dee935a82201
 
 
 ## Features
