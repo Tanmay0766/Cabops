@@ -6,14 +6,31 @@ from dotenv import load_dotenv
 from google import genai
 from google.genai import types
 
+def get_api_key():
+
+    api_key = os.getenv("GEMINI_API_KEY")
+
+    if api_key:
+        return api_key
+
+    try:
+        import streamlit as st
+
+        return st.secrets.get("GEMINI_API_KEY")
+
+    except Exception:
+        return None
+
 def analyze(incident, metrics, system_prompt):
 
     load_dotenv(override=True)
 
-    api_key = os.getenv("GEMINI_API_KEY")
+    api_key = get_api_key()
 
     if not api_key:
-        raise RuntimeError("GEMINI_API_KEY is missing. Add it to your .env file.")
+        raise RuntimeError(
+            "GEMINI_API_KEY is missing. Add it to your .env file locally or Streamlit secrets online."
+        )
 
     client = genai.Client(api_key=api_key)
 
