@@ -2,6 +2,12 @@
 
 CabOps AI is a Streamlit app for handling cab operations incidents such as driver absence, vehicle breakdowns, bad weather, and backup capacity shortages. It calculates operational metrics, sends the incident context to Gemini, and returns a structured incident response with priority, dispatch strategy, impact, ready-to-send messages, and manual decision points.
 
+# Demo:
+
+
+
+
+
 ## Features
 
 - Incident input form for route, client, driver absence, weather, breakdown details, and employee counts
@@ -31,7 +37,7 @@ The risk score is calculated before calling Gemini. It gives the app a consisten
 
 ```text
 Risk score =
-35 if a driver is marked absent
++ 35 if a driver is marked absent
 + 30 if a vehicle breakdown is entered
 + 10 for Rain, or 20 for Heavy Rain
 + 5 for each waiting employee
@@ -51,7 +57,7 @@ Below 35: Low
 
 - Python 3.10 or newer
 - Gemini API key
-- Git, if you want to push changes to GitHub
+- Git
 
 ## Local Setup
 
